@@ -28,8 +28,13 @@ class Piper(TTSModule):
                .. raises:: MissingTTSParameterException
         """
         if self.language == "default" or self.language is None:
+            raise MissingTTSParameter("[Piper] Missing language, bad tts cache !")
+        return True
+
+        if self.model is None:
             raise MissingTTSParameter("[Piper] Missing model, check documentation !")
         return True
+
 
     def say(self, words):
         """
@@ -45,7 +50,7 @@ class Piper(TTSModule):
 
         .. raises:: FailToLoadSoundFile
         """
-        voice = PiperVoice.load(self.language)
+        voice = PiperVoice.load(self.model)
         logger.debug("[Piper] File Path: %s" % self.file_path)
         wav_file = wave.open(self.file_path, "w")
         audio = voice.synthesize(self.words, wav_file)
