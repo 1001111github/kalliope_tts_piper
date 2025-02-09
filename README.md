@@ -14,11 +14,11 @@ Place the model and json config in the desired directory. Rename the json config
 | parameter    | required | type    | choices                                   | comment                    |
 |--------------|----------|---------|-------------------------------------------|----------------------------|
 | language     | Yes      | string  | "your_model_choice"                       | filename, without extension 
-| model        | Yes      | string  | "path/your_model_choice.[onnx|tflite]     | Full path to model file
+| model        | Yes      | string  | "path/your_model_choice.[onnx,tflite]     | Full path to model file
 | name         | No       | string  | Or any wake word                          | Relates voices to names used as trigger wake words 
 | voiceN       | No       | string  | Any label that contains 'voice'           | Identifies a voice (language/model) related to a wake word
 | languageN    | No       | string  | "your_model_choiceN"                      | filename, without extension for voice N
-| modelN       | No       | string  | "path/your_model_choiceN.[onnx|tflite]    | Full path to model file for voice N
+| modelN       | No       | string  | "path/your_model_choiceN.[onnx,tflite]    | Full path to model file for voice N
 | nameN        | No       | string  | Any wake word                             | Wake word associated with voice N 
 | cache        | Yes      | BOOL    | 'True', 'False' 
 
