@@ -1,0 +1,12 @@
+---
+- name: piper
+  hosts: localhost
+  gather_facts: no
+  connection: local
+  become: true
+  tasks:
+    - name: "pip installs"
+      pip:
+        name: piper
+        executable: pip3
+

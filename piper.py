@@ -1,4 +1,5 @@
 # djm 2025/02
+# 90% of this code is from Kalliope
 # all can use
 
 import wave
@@ -17,6 +18,7 @@ class Piper(TTSModule):
     def __init__(self, **kwargs):
         super(Piper, self).__init__(**kwargs)
         self.path = kwargs.get('path', None)
+        self.model = kwargs.get('model', None)
 
         self._check_parameters()
 
@@ -28,13 +30,12 @@ class Piper(TTSModule):
                .. raises:: MissingTTSParameterException
         """
         if self.language == "default" or self.language is None:
-            raise MissingTTSParameter("[Piper] Missing language, bad tts cache !")
+            raise MissingTTSParameter("[Piper] Missing language, bad tts cache path !")
         return True
 
         if self.model is None:
             raise MissingTTSParameter("[Piper] Missing model, check documentation !")
         return True
-
 
     def say(self, words):
         """
