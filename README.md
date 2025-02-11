@@ -7,7 +7,7 @@ kalliope install --git-url https://github.com/1001111github/kalliope_tts_piper.g
 ```
 
 You will need to download at least one voice model with it's config from [here](https://github.com/rhasspy/piper/blob/master/VOICES.md)
-Place the model and json config in the desired directory. Rename the json config to match "full_model_file_name".json
+ or [here](https://piper.ttstool.com/). Place the model and json config in the desired directory. Rename the json config to match "full_model_file_name".json
 
 ## Parameters
 
