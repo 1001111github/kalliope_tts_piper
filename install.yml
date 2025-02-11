@@ -7,6 +7,6 @@
   tasks:
     - name: "pip installs"
       pip:
-        name: piper
+        name: piper-tts
         executable: pip3
 
